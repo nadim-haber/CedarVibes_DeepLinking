@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" />
+  <xs:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="AlbumRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q1:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AlbumDetails" nillable="true" type="tns:ArrayOfAlbumDetailRequest" />
+          <xs:element minOccurs="0" name="AlbumGuid" type="ser:guid" />
+          <xs:element minOccurs="0" name="AlbumID" type="xs:long" />
+          <xs:element minOccurs="0" name="AlbumTypeID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ContentCategoryID" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="IsPremium" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Media" nillable="true" type="tns:ArrayOfMediaRequest" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PublishedBy" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PublishedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PublishedOnUtc" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UnpublishedBy" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="UnpublishedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UnpublishedOnUtc" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlbumRequest" nillable="true" type="tns:AlbumRequest" />
+  <xs:complexType name="ArrayOfAlbumDetailRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlbumDetailRequest" nillable="true" type="tns:AlbumDetailRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlbumDetailRequest" nillable="true" type="tns:ArrayOfAlbumDetailRequest" />
+  <xs:complexType name="AlbumDetailRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlbumGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="AlbumID" type="xs:long" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainMediaPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainMediaThumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainMediaType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Media" nillable="true" type="tns:ArrayOfMediaRequest" />
+      <xs:element minOccurs="0" name="PublishedBy" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PublishedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PublishedOnUtc" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SeoTags" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnpublishedBy" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UnpublishedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UnpublishedOnUtc" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlbumDetailRequest" nillable="true" type="tns:AlbumDetailRequest" />
+  <xs:complexType name="ArrayOfMediaRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MediaRequest" nillable="true" type="tns:MediaRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMediaRequest" nillable="true" type="tns:ArrayOfMediaRequest" />
+  <xs:complexType name="MediaRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlbumID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsPremium" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Link" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MediaGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="MediaID" type="xs:long" />
+      <xs:element minOccurs="0" name="MediaTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="RelativeUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShortUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StorageGuid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MediaRequest" nillable="true" type="tns:MediaRequest" />
+  <xs:complexType name="GuidRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q2:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GuidRequest" nillable="true" type="tns:GuidRequest" />
+  <xs:complexType name="AlbumCollectionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CollectionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AlbumGuid" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContentCategoryTag" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlbumCollectionRequest" nillable="true" type="tns:AlbumCollectionRequest" />
+  <xs:complexType name="CollectionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q3:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CollectionRequest" nillable="true" type="tns:CollectionRequest" />
+  <xs:complexType name="GetAlbumRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GuidRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAlbumRequest" nillable="true" type="tns:GetAlbumRequest" />
+  <xs:complexType name="GuidCollectionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CollectionRequest">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Collection" nillable="true" type="q4:ArrayOfguid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GuidCollectionRequest" nillable="true" type="tns:GuidCollectionRequest" />
+  <xs:complexType name="StorageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capacity" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FreeSpace" type="xs:long" />
+      <xs:element minOccurs="0" name="PhysicalPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element minOccurs="0" name="ServerUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StorageGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="UsedSpace" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StorageRequest" nillable="true" type="tns:StorageRequest" />
+  <xs:complexType name="ArrayOfGetAvailableStorageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetAvailableStorageRequest" nillable="true" type="tns:GetAvailableStorageRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetAvailableStorageRequest" nillable="true" type="tns:ArrayOfGetAvailableStorageRequest" />
+  <xs:complexType name="GetAvailableStorageRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q5:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="File" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Size" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAvailableStorageRequest" nillable="true" type="tns:GetAvailableStorageRequest" />
+  <xs:complexType name="ArrayOfStorageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StorageRequest" nillable="true" type="tns:StorageRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStorageRequest" nillable="true" type="tns:ArrayOfStorageRequest" />
+  <xs:complexType name="UpdateStorageUsedSpaceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q6:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MediaSizeByte" type="xs:long" />
+          <xs:element minOccurs="0" name="StorageGuid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateStorageUsedSpaceRequest" nillable="true" type="tns:UpdateStorageUsedSpaceRequest" />
+  <xs:complexType name="AlbumLikeRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GuidRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Like" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlbumLikeRequest" nillable="true" type="tns:AlbumLikeRequest" />
+  <xs:complexType name="EntityCollectionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CollectionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityCollectionRequest" nillable="true" type="tns:EntityCollectionRequest" />
+  <xs:complexType name="AlbumCommentRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GuidRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlbumCommentRequest" nillable="true" type="tns:AlbumCommentRequest" />
+  <xs:complexType name="ArrayOfAlbumCommentRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlbumCommentRequest" nillable="true" type="tns:AlbumCommentRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlbumCommentRequest" nillable="true" type="tns:ArrayOfAlbumCommentRequest" />
+  <xs:complexType name="StoreAlbumRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlbumTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfStoreAlbumDetailsRequest" />
+      <xs:element minOccurs="0" name="Files" nillable="true" type="tns:ArrayOfFileRequest" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="PublishedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PublishedOnUtc" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UnpublishedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UnpublishedOnUtc" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StoreAlbumRequest" nillable="true" type="tns:StoreAlbumRequest" />
+  <xs:complexType name="ArrayOfStoreAlbumDetailsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoreAlbumDetailsRequest" nillable="true" type="tns:StoreAlbumDetailsRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStoreAlbumDetailsRequest" nillable="true" type="tns:ArrayOfStoreAlbumDetailsRequest" />
+  <xs:complexType name="StoreAlbumDetailsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StoreAlbumDetailsRequest" nillable="true" type="tns:StoreAlbumDetailsRequest" />
+  <xs:complexType name="ArrayOfFileRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileRequest" nillable="true" type="tns:FileRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileRequest" nillable="true" type="tns:ArrayOfFileRequest" />
+  <xs:complexType name="FileRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Reference" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileRequest" nillable="true" type="tns:FileRequest" />
+  <xs:complexType name="StoreFileRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlbumType" type="xs:int" />
+      <xs:element minOccurs="0" name="Files" nillable="true" type="tns:ArrayOfFileRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StoreFileRequest" nillable="true" type="tns:StoreFileRequest" />
+</xs:schema>

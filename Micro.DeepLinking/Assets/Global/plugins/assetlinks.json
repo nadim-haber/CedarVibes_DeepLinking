@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.apps2you.whatnow",
+    "sha256_cert_fingerprints":
+    ["1F:7A:04:32:DA:2B:5A:79:7D:75:4C:A5:53:CF:76:39:2A:DC:63:09:D9:E4:4C:CF:D6:74:EA:D4:64:2D:22:29"]
+  }
+}]

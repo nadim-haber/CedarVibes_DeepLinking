@@ -1,0 +1,77 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+    
+}
+
+body{
+    background: url(../Assets/Images/what_now_desk.jpg) no-repeat center center fixed;
+    background-color: transparent !important;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.footer {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: 5%;
+    max-width: 100%;
+}
+
+.storeLink {
+    width: 200px;
+}
+
+.apple {
+    float: right;
+}
+.google {
+    float: left;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
+    body {
+        background: url(../Assets/Images/what_now_tab.jpg) no-repeat center center fixed;
+		background-size: cover;
+    }
+    .storeLink {
+        width: 55%;
+    }
+    .footer {
+        margin-bottom: 10%;
+    }
+}
+
+@media only screen and (max-device-width: 767px){
+    .footer {
+        margin-bottom: 10%;
+    }
+
+    .storeLink {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    body {
+        background: url(../Assets/Images/what_now_mobile.jpg) no-repeat center center fixed;
+		background-size: cover;
+    }
+}
+
+@media screen and (max-device-aspect-ratio: 1/2) {
+	body {
+        background: url(../Assets/Images/what_now_mobile.jpg) no-repeat center center fixed;
+		background-size: contain;
+    }
+}

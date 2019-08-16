@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" />
+  <xs:complexType name="ArrayOfAlbumResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlbumResponse" nillable="true" type="tns:AlbumResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlbumResponse" nillable="true" type="tns:ArrayOfAlbumResponse" />
+  <xs:complexType name="AlbumResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsPremium" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LikeCount" type="xs:long" />
+      <xs:element minOccurs="0" name="IsLiked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MediaCount" type="xs:int" />
+      <xs:element minOccurs="0" name="PublishedOn" type="xs:long" />
+      <xs:element minOccurs="0" name="PublishedOnUtc" type="xs:long" />
+      <xs:element minOccurs="0" name="PublishedBy" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UnpublishedOn" type="xs:long" />
+      <xs:element minOccurs="0" name="UnpublishedOnUtc" type="xs:long" />
+      <xs:element minOccurs="0" name="UnpublishedBy" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfAlbumDetailsResponse" />
+      <xs:element minOccurs="0" name="MediaDetails" nillable="true" type="tns:ArrayOfMediaResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlbumResponse" nillable="true" type="tns:AlbumResponse" />
+  <xs:complexType name="ArrayOfAlbumDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlbumDetailsResponse" nillable="true" type="tns:AlbumDetailsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlbumDetailsResponse" nillable="true" type="tns:ArrayOfAlbumDetailsResponse" />
+  <xs:complexType name="AlbumDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeoTags" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="Media" nillable="true" type="q1:MediaObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlbumDetailsResponse" nillable="true" type="tns:AlbumDetailsResponse" />
+  <xs:complexType name="ArrayOfMediaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MediaResponse" nillable="true" type="tns:MediaResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMediaResponse" nillable="true" type="tns:ArrayOfMediaResponse" />
+  <xs:complexType name="MediaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FullPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Link" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShortUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LikeCount" type="xs:long" />
+      <xs:element minOccurs="0" name="IsLiked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPremium" type="xs:boolean" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="Media" nillable="true" type="q2:MediaObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MediaResponse" nillable="true" type="tns:MediaResponse" />
+  <xs:complexType name="ArrayOfAlbumCMSResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlbumCMSResponse" nillable="true" type="tns:AlbumCMSResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlbumCMSResponse" nillable="true" type="tns:ArrayOfAlbumCMSResponse" />
+  <xs:complexType name="AlbumCMSResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlbumGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfAlbumDetailsResponse" />
+      <xs:element minOccurs="0" name="IsPremium" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LikeCount" type="xs:long" />
+      <xs:element minOccurs="0" name="MediaCount" type="xs:int" />
+      <xs:element minOccurs="0" name="MediaDetails" nillable="true" type="tns:ArrayOfMediaResponse" />
+      <xs:element minOccurs="0" name="PublishedBy" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PublishedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PublishedOnUtc" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UnpublishedBy" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UnpublishedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UnpublishedOnUtc" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlbumCMSResponse" nillable="true" type="tns:AlbumCMSResponse" />
+  <xs:complexType name="ArrayOfGalleryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GalleryResponse" nillable="true" type="tns:GalleryResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGalleryResponse" nillable="true" type="tns:ArrayOfGalleryResponse" />
+  <xs:complexType name="GalleryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:long" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="Media" nillable="true" type="q3:MediaObject" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="Album" nillable="true" type="q4:ArrayOfMediaObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GalleryResponse" nillable="true" type="tns:GalleryResponse" />
+  <xs:complexType name="MediaCMSResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsPremium" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LikeCount" type="xs:long" />
+      <xs:element minOccurs="0" name="Link" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MediaGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="MediaTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="RelativeUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShortUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MediaCMSResponse" nillable="true" type="tns:MediaCMSResponse" />
+  <xs:complexType name="ArrayOfAlbumLikeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlbumLikeResponse" nillable="true" type="tns:AlbumLikeResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlbumLikeResponse" nillable="true" type="tns:ArrayOfAlbumLikeResponse" />
+  <xs:complexType name="AlbumLikeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlbumLikeResponse" nillable="true" type="tns:AlbumLikeResponse" />
+  <xs:complexType name="UploadMediaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GalleryGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Media" nillable="true" type="tns:ArrayOfStoreFileResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UploadMediaResponse" nillable="true" type="tns:UploadMediaResponse" />
+  <xs:complexType name="ArrayOfStoreFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoreFileResponse" nillable="true" type="tns:StoreFileResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStoreFileResponse" nillable="true" type="tns:ArrayOfStoreFileResponse" />
+  <xs:complexType name="StoreFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GalleryGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="MediaGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="MediaTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Reference" type="ser:guid" />
+      <xs:element minOccurs="0" name="RelativeUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StorageGuid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StoreFileResponse" nillable="true" type="tns:StoreFileResponse" />
+</xs:schema>

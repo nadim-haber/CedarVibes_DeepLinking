@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Micro.Common.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+  <xs:complexType name="BaseRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_Version" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelTag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorrelationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeviceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LanguageCode" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="PlatformTag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserAgent" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseRequest" nillable="true" type="tns:BaseRequest" />
+  <xs:complexType name="ResponseOfSearchResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SearchResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q2:SearchResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfSearchResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfSearchResponsedhY6ZDpg" />
+  <xs:complexType name="GalleryObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GallerReference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Media" nillable="true" type="tns:ArrayOfMediaObject" />
+      <xs:element minOccurs="0" name="MediaCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GalleryObject" nillable="true" type="tns:GalleryObject" />
+  <xs:complexType name="ArrayOfMediaObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MediaObject" nillable="true" type="tns:MediaObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMediaObject" nillable="true" type="tns:ArrayOfMediaObject" />
+  <xs:complexType name="MediaObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Thumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeValue" type="xs:int" />
+      <xs:element minOccurs="0" name="Duration" type="xs:long" />
+      <xs:element minOccurs="0" name="Guid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MediaObject" nillable="true" type="tns:MediaObject" />
+  <xs:complexType name="ResponseOfArrayOfSearchAttributeResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfSearchAttributeResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q3:ArrayOfSearchAttributeResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfArrayOfSearchAttributeResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfArrayOfSearchAttributeResponsedhY6ZDpg" />
+  <xs:complexType name="ResponseOfguid">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="guid" Namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" type="ser:guid" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfguid" nillable="true" type="tns:ResponseOfguid" />
+  <xs:complexType name="ResponseOfArrayOfItemListingResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfItemListingResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q4:ArrayOfItemListingResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfArrayOfItemListingResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfArrayOfItemListingResponsedhY6ZDpg" />
+  <xs:complexType name="ResponseOfItemInfoResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ItemInfoResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q5:ItemInfoResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfItemInfoResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfItemInfoResponsedhY6ZDpg" />
+  <xs:complexType name="ResponseOfboolean">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfboolean" nillable="true" type="tns:ResponseOfboolean" />
+  <xs:complexType name="ResponseOfArrayOfEntityResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfEntityResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q6:ArrayOfEntityResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfArrayOfEntityResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfArrayOfEntityResponsedhY6ZDpg" />
+  <xs:complexType name="ResponseOfEntityInfoResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EntityInfoResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q7:EntityInfoResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfEntityInfoResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfEntityInfoResponsedhY6ZDpg" />
+  <xs:complexType name="ResponseOfArrayOfEntityInfoResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfEntityInfoResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q8:ArrayOfEntityInfoResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfArrayOfEntityInfoResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfArrayOfEntityInfoResponsedhY6ZDpg" />
+  <xs:complexType name="ResponseOfVendorInfoResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="VendorInfoResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q9:VendorInfoResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfVendorInfoResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfVendorInfoResponsedhY6ZDpg" />
+</xs:schema>

@@ -1,0 +1,66 @@
+﻿@model Micro.DeepLinking.Models.ShareModel
+@{
+    if (Model != null && !string.IsNullOrWhiteSpace(Model.Title))
+    {
+        ViewBag.Title = Model.Title.Trim();
+    }
+    else
+    {
+        ViewBag.Title = string.Empty;
+    }
+}
+@section meta{
+    @if (Model != null)
+    {
+        <meta name="description" content="@(Model.Description.Length > 155 ? Model.Description.Substring(0, 155) : Model.Description)" /> @*Maximum of 155 characters*@
+        <meta property="og:title" content="@(Model.Title.Length > 35 ? Model.Title.Substring(0, 35) : Model.Title)" /> @*Maximum 35 characters*@
+        <meta property="og:url" content="@Model.ShareLink" /> @*Full link to your webpage address*@
+        <meta property="og:description" content="@(Model.Description.Length > 65 ? Model.Description.Substring(0, 65) : Model.Description)"> @*Maximum 65 characters*@
+        <meta property="og:image" content="@Model.Image"> @*Image(JPG or PNG) of size less than 300KB and minimum dimension of 300 x 200 pixel is advised*@
+        <meta property="og:type" content="@Model.Type" /> @*In order for your object to be represented within the graph, you need to specify its type. Here's a list of the global types available: http://ogp.me/#types. You can also specify your own types.*@
+        <meta property="og:locale" content="@Model.Locale" /> @*The locale of the resource. You can also use og:locale:alternate if you have other language translations available.If you don't specify og:locale, it defaults to en_US.*@
+    }
+}
+
+<div class="container footer">
+    <div class="row">
+        <div class="col-lg-6">
+
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <a href="https://itunes.apple.com/us/app/"><img class="storeLink apple" src="~/Assets/Images/store_apple.png" /></a>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <a href="https://play.google.com/store/apps/details?id="><img class="storeLink google" src="~/Assets/Images/store_google.png" /></a>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        function loadAppMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            console.log("cedarvibeschema://Screen=".concat(getParameterByName('Value')));
+            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i) || userAgent.match(/iPod/i)) {
+                setTimeout(function () { window.location = "https://itunes.apple.com/us/app/"; }, 2000);
+                window.location = "cedarvibeschema://Screen=".concat(getParameterByName('Value'));
+            }
+            else if (userAgent.match(/Android/i)) {
+                setTimeout(function () { window.location = "https://play.google.com/store/apps/details?id="; }, 2000);
+                window.location = "cedarvibeschema://Screen=".concat(getParameterByName('Value'));
+            }
+        }
+    </script>
+
+}

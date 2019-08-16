@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" />
+  <xs:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" />
+  <xs:element name="Search">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q1:SearchRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="SearchResult" nillable="true" type="q2:ResponseOfSearchResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDefinition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q3:SearchDefinitionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDefinitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="SearchDefinitionResult" nillable="true" type="q4:ResponseOfArrayOfSearchAttributeResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q5:PostItemRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="PostItemResult" nillable="true" type="q6:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q7:GetItemsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetItemsResult" nillable="true" type="q8:ResponseOfArrayOfItemListingResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q9:ItemInfoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetItemInfoResult" nillable="true" type="q10:ResponseOfItemInfoResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivateDeactivateItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q11:ActivateDeactivateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivateDeactivateItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="ActivateDeactivateItemResult" nillable="true" type="q12:ResponseOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q13:UserCollectionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetMyItemsResult" nillable="true" type="q14:ResponseOfArrayOfItemListingResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q15:GetEntitiesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetEntitiesResult" nillable="true" type="q16:ResponseOfArrayOfEntityResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityDefinition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q17:GuidRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityDefinitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetEntityDefinitionResult" nillable="true" type="q18:ResponseOfEntityInfoResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q19:GuidRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetEntityInfoResult" nillable="true" type="q20:ResponseOfArrayOfEntityInfoResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q21:VendorInfoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetVendorInfoResult" nillable="true" type="q22:ResponseOfVendorInfoResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LikeUnlikeItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q23:LikeUnlikeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LikeUnlikeItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="LikeUnlikeItemResult" nillable="true" type="q24:ResponseOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LikeUnlikeVendor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q25:LikeUnlikeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LikeUnlikeVendorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="LikeUnlikeVendorResult" nillable="true" type="q26:ResponseOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLikeItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q27:UserCollectionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLikeItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetLikeItemsResult" nillable="true" type="q28:ResponseOfArrayOfItemListingResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

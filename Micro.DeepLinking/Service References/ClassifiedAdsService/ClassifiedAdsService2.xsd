@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" />
+  <xs:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SearchResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfItemListingResponse" />
+      <xs:element minOccurs="0" name="TotalCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchResponse" nillable="true" type="tns:SearchResponse" />
+  <xs:complexType name="ArrayOfItemListingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemListingResponse" nillable="true" type="tns:ItemListingResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemListingResponse" nillable="true" type="tns:ArrayOfItemListingResponse" />
+  <xs:complexType name="ItemListingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:long" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="Gallery" nillable="true" type="q1:GalleryObject" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsFeatured" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLiked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:VendorResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemListingResponse" nillable="true" type="tns:ItemListingResponse" />
+  <xs:complexType name="VendorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="Media" nillable="true" type="q2:MediaObject" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VendorResponse" nillable="true" type="tns:VendorResponse" />
+  <xs:complexType name="ArrayOfSearchAttributeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchAttributeResponse" nillable="true" type="tns:SearchAttributeResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchAttributeResponse" nillable="true" type="tns:ArrayOfSearchAttributeResponse" />
+  <xs:complexType name="SearchAttributeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dependency" nillable="true" type="tns:DependencyResponse" />
+      <xs:element minOccurs="0" name="Format" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAutoComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMultiSelect" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRange" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LookupValues" nillable="true" type="tns:ArrayOfLookupValueResponse" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlaceHolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Range" nillable="true" type="tns:RangeResponse" />
+      <xs:element minOccurs="0" name="Regex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchAttributeResponse" nillable="true" type="tns:SearchAttributeResponse" />
+  <xs:complexType name="DependencyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SourceTag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueTag" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DependencyResponse" nillable="true" type="tns:DependencyResponse" />
+  <xs:complexType name="ArrayOfLookupValueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LookupValueResponse" nillable="true" type="tns:LookupValueResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLookupValueResponse" nillable="true" type="tns:ArrayOfLookupValueResponse" />
+  <xs:complexType name="LookupValueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDefault" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LookupValueResponse" nillable="true" type="tns:LookupValueResponse" />
+  <xs:complexType name="RangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Max" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="MaxName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Min" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="MinName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RangeResponse" nillable="true" type="tns:RangeResponse" />
+  <xs:complexType name="ItemInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Attributes" nillable="true" type="q3:ArrayOfKeyValueOfstringstring" />
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="tns:ArrayOfContactCapabilityResponse" />
+      <xs:element minOccurs="0" name="Date" type="xs:long" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityTag" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="Gallery" nillable="true" type="q4:GalleryObject" />
+      <xs:element minOccurs="0" name="IsFeatured" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLiked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="LikeCount" type="xs:long" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:double" />
+      <xs:element minOccurs="0" name="ShareCount" type="xs:long" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendor" nillable="true" type="tns:VendorResponse" />
+      <xs:element minOccurs="0" name="ViewCount" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemInfoResponse" nillable="true" type="tns:ItemInfoResponse" />
+  <xs:complexType name="ArrayOfContactCapabilityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactCapabilityResponse" nillable="true" type="tns:ContactCapabilityResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactCapabilityResponse" nillable="true" type="tns:ArrayOfContactCapabilityResponse" />
+  <xs:complexType name="ContactCapabilityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactCapabilityResponse" nillable="true" type="tns:ContactCapabilityResponse" />
+  <xs:complexType name="ArrayOfEntityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntityResponse" nillable="true" type="tns:EntityResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntityResponse" nillable="true" type="tns:ArrayOfEntityResponse" />
+  <xs:complexType name="EntityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Children" nillable="true" type="tns:ArrayOfEntityResponse" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfEntityDetailsResponse" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="Media" nillable="true" type="q5:MediaObject" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityResponse" nillable="true" type="tns:EntityResponse" />
+  <xs:complexType name="ArrayOfEntityDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntityDetailsResponse" nillable="true" type="tns:EntityDetailsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntityDetailsResponse" nillable="true" type="tns:ArrayOfEntityDetailsResponse" />
+  <xs:complexType name="EntityDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityDetailsResponse" nillable="true" type="tns:EntityDetailsResponse" />
+  <xs:complexType name="EntityInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Attributes" nillable="true" type="tns:ArrayOfAttributeResponse" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfEntityDetailsResponse" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="Media" nillable="true" type="q6:MediaObject" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityInfoResponse" nillable="true" type="tns:EntityInfoResponse" />
+  <xs:complexType name="ArrayOfAttributeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttributeResponse" nillable="true" type="tns:AttributeResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttributeResponse" nillable="true" type="tns:ArrayOfAttributeResponse" />
+  <xs:complexType name="AttributeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SortAscending" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Regex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Format" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlaceHolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsVisible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAutoComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMultiSelect" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lookup" nillable="true" type="tns:LookupResponse" />
+      <xs:element minOccurs="0" name="Dependency" nillable="true" type="tns:DependencyResponse" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AttributeResponse" nillable="true" type="tns:AttributeResponse" />
+  <xs:complexType name="LookupResponse">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SelectedValues" nillable="true" type="q7:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Values" nillable="true" type="tns:ArrayOfLookupValueResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LookupResponse" nillable="true" type="tns:LookupResponse" />
+  <xs:complexType name="ArrayOfEntityInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntityInfoResponse" nillable="true" type="tns:EntityInfoResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntityInfoResponse" nillable="true" type="tns:ArrayOfEntityInfoResponse" />
+  <xs:complexType name="VendorInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsLiked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfItemResponse" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="Media" nillable="true" type="q8:MediaObject" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VendorInfoResponse" nillable="true" type="tns:VendorInfoResponse" />
+  <xs:complexType name="ArrayOfItemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemResponse" nillable="true" type="tns:ItemResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemResponse" nillable="true" type="tns:ArrayOfItemResponse" />
+  <xs:complexType name="ItemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:long" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="Gallery" nillable="true" type="q9:GalleryObject" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsFeatured" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemResponse" nillable="true" type="tns:ItemResponse" />
+</xs:schema>

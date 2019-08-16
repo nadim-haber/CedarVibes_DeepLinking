@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" />
+  <xs:complexType name="SearchRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q1:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Category" type="ser:guid" />
+          <xs:element minOccurs="0" name="Filters" nillable="true" type="tns:ArrayOfSearchFilterRequest" />
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+          <xs:element minOccurs="0" name="Query" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchRequest" nillable="true" type="tns:SearchRequest" />
+  <xs:complexType name="ArrayOfSearchFilterRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchFilterRequest" nillable="true" type="tns:SearchFilterRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchFilterRequest" nillable="true" type="tns:ArrayOfSearchFilterRequest" />
+  <xs:complexType name="SearchFilterRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchFilterRequest" nillable="true" type="tns:SearchFilterRequest" />
+  <xs:complexType name="SearchDefinitionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q2:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Entity" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchDefinitionRequest" nillable="true" type="tns:SearchDefinitionRequest" />
+  <xs:complexType name="PostItemRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GuidRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Category" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContactCapabilities" nillable="true" type="tns:ArrayOfContactCapabilityRequest" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gallery" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PostItemRequest" nillable="true" type="tns:PostItemRequest" />
+  <xs:complexType name="GuidRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q3:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GuidRequest" nillable="true" type="tns:GuidRequest" />
+  <xs:complexType name="ArrayOfContactCapabilityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactCapabilityRequest" nillable="true" type="tns:ContactCapabilityRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactCapabilityRequest" nillable="true" type="tns:ArrayOfContactCapabilityRequest" />
+  <xs:complexType name="ContactCapabilityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactCapabilityRequest" nillable="true" type="tns:ContactCapabilityRequest" />
+  <xs:complexType name="GetItemsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q4:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Category" type="ser:guid" />
+          <xs:element minOccurs="0" name="CountryISO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastItemGuid" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+          <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetItemsRequest" nillable="true" type="tns:GetItemsRequest" />
+  <xs:complexType name="ItemInfoRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GuidRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ItemInfoRequest" nillable="true" type="tns:ItemInfoRequest" />
+  <xs:complexType name="ActivateDeactivateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q5:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ActivateDeactivateRequest" nillable="true" type="tns:ActivateDeactivateRequest" />
+  <xs:complexType name="UserCollectionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CollectionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LastItemGuid" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserCollectionRequest" nillable="true" type="tns:UserCollectionRequest" />
+  <xs:complexType name="CollectionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q6:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CollectionRequest" nillable="true" type="tns:CollectionRequest" />
+  <xs:complexType name="GetEntitiesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q7:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LoadRelatedData" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetEntitiesRequest" nillable="true" type="tns:GetEntitiesRequest" />
+  <xs:complexType name="VendorInfoRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GuidRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VendorInfoRequest" nillable="true" type="tns:VendorInfoRequest" />
+  <xs:complexType name="LikeUnlikeRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Micro.Common.Model" base="q8:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+          <xs:element minOccurs="0" name="Like" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LikeUnlikeRequest" nillable="true" type="tns:LikeUnlikeRequest" />
+</xs:schema>

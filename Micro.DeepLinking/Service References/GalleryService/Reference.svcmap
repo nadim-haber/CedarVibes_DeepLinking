@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c1d0eabd-d788-4217-9b54-78b595965610" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Micro.Common" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://core1.apps2you.org:4550/GalleryService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GalleryService.xsd" MetadataType="Schema" ID="781e89ce-4e4b-4ab6-ae9f-2bb00bbe127e" SourceId="1" SourceUrl="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd4" />
+    <MetadataFile FileName="GalleryService1.xsd" MetadataType="Schema" ID="6d9bc60d-7f9a-4e6c-bd5f-993ca11511d7" SourceId="1" SourceUrl="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd5" />
+    <MetadataFile FileName="GalleryService2.xsd" MetadataType="Schema" ID="21748ac5-620c-4212-b83a-a30563eddedb" SourceId="1" SourceUrl="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="GalleryService3.xsd" MetadataType="Schema" ID="0bf4e07e-7df0-4dc1-bb27-1d9811894dfa" SourceId="1" SourceUrl="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="GalleryService4.xsd" MetadataType="Schema" ID="d54bc58b-e1fc-4821-9464-bf55f043aa1c" SourceId="1" SourceUrl="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd2" />
+    <MetadataFile FileName="GalleryService5.xsd" MetadataType="Schema" ID="fd1c98a5-bd77-4648-bad7-ed1b9d5760d9" SourceId="1" SourceUrl="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd3" />
+    <MetadataFile FileName="GalleryService.disco" MetadataType="Disco" ID="dac90b05-4d2e-49e6-aac6-8345e8d3249c" SourceId="1" SourceUrl="http://core1.apps2you.org:4550/GalleryService.svc?disco" />
+    <MetadataFile FileName="GalleryService.wsdl" MetadataType="Wsdl" ID="46f35112-d684-462b-ab76-7512aec739a7" SourceId="1" SourceUrl="http://core1.apps2you.org:4550/GalleryService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

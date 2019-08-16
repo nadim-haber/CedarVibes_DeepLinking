@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GalleryService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" />
+      <xsd:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" />
+      <xsd:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGalleryService_CreateAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAlbum" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_CreateAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_DeleteAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAlbum" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_DeleteAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAllAlbums_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAlbums" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAllAlbums_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAlbumsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetCMSAllAlbums_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCMSAllAlbums" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetCMSAllAlbums_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCMSAllAlbumsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlbum" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetCMSAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCMSAlbum" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetCMSAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCMSAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_UpdateAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAlbum" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_UpdateAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetGalleryCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGalleryCollection" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetGalleryCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGalleryCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_CreateStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStorage" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_CreateStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_DeleteStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStorage" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_DeleteStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorage" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAvailableStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableStorage" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAvailableStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAllStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStorage" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAllStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_UpdateStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStorage" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_UpdateStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_UpdateStorageUsedSpace_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStorageUsedSpace" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_UpdateStorageUsedSpace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStorageUsedSpaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_CreateMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMedia" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_CreateMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_DeleteMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMedia" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_DeleteMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedia" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_LikeAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:LikeAlbum" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_LikeAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LikeAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAllAlbumLikes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAlbumLikes" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAllAlbumLikes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAlbumLikesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_CommentAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:CommentAlbum" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_CommentAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CommentAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAllCommentsByEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCommentsByEvent" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_GetAllCommentsByEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCommentsByEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_UploadAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadAlbum" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_UploadAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_UploadMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadMedia" />
+  </wsdl:message>
+  <wsdl:message name="IGalleryService_UploadMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadMediaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGalleryService">
+    <wsdl:operation name="CreateAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/CreateAlbum" message="tns:IGalleryService_CreateAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/CreateAlbumResponse" message="tns:IGalleryService_CreateAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/DeleteAlbum" message="tns:IGalleryService_DeleteAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/DeleteAlbumResponse" message="tns:IGalleryService_DeleteAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAlbums">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/GetAllAlbums" message="tns:IGalleryService_GetAllAlbums_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/GetAllAlbumsResponse" message="tns:IGalleryService_GetAllAlbums_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCMSAllAlbums">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/GetCMSAllAlbums" message="tns:IGalleryService_GetCMSAllAlbums_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/GetCMSAllAlbumsResponse" message="tns:IGalleryService_GetCMSAllAlbums_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/GetAlbum" message="tns:IGalleryService_GetAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/GetAlbumResponse" message="tns:IGalleryService_GetAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCMSAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/GetCMSAlbum" message="tns:IGalleryService_GetCMSAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/GetCMSAlbumResponse" message="tns:IGalleryService_GetCMSAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/UpdateAlbum" message="tns:IGalleryService_UpdateAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/UpdateAlbumResponse" message="tns:IGalleryService_UpdateAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGalleryCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/GetGalleryCollection" message="tns:IGalleryService_GetGalleryCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/GetGalleryCollectionResponse" message="tns:IGalleryService_GetGalleryCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/CreateStorage" message="tns:IGalleryService_CreateStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/CreateStorageResponse" message="tns:IGalleryService_CreateStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/DeleteStorage" message="tns:IGalleryService_DeleteStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/DeleteStorageResponse" message="tns:IGalleryService_DeleteStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/GetStorage" message="tns:IGalleryService_GetStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/GetStorageResponse" message="tns:IGalleryService_GetStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/GetAvailableStorage" message="tns:IGalleryService_GetAvailableStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/GetAvailableStorageResponse" message="tns:IGalleryService_GetAvailableStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/GetAllStorage" message="tns:IGalleryService_GetAllStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/GetAllStorageResponse" message="tns:IGalleryService_GetAllStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/UpdateStorage" message="tns:IGalleryService_UpdateStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/UpdateStorageResponse" message="tns:IGalleryService_UpdateStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStorageUsedSpace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/UpdateStorageUsedSpace" message="tns:IGalleryService_UpdateStorageUsedSpace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/UpdateStorageUsedSpaceResponse" message="tns:IGalleryService_UpdateStorageUsedSpace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/CreateMedia" message="tns:IGalleryService_CreateMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/CreateMediaResponse" message="tns:IGalleryService_CreateMedia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/DeleteMedia" message="tns:IGalleryService_DeleteMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/DeleteMediaResponse" message="tns:IGalleryService_DeleteMedia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/GetMedia" message="tns:IGalleryService_GetMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/GetMediaResponse" message="tns:IGalleryService_GetMedia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LikeAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/LikeAlbum" message="tns:IGalleryService_LikeAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/LikeAlbumResponse" message="tns:IGalleryService_LikeAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAlbumLikes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/GetAllAlbumLikes" message="tns:IGalleryService_GetAllAlbumLikes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/GetAllAlbumLikesResponse" message="tns:IGalleryService_GetAllAlbumLikes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CommentAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/CommentAlbum" message="tns:IGalleryService_CommentAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/CommentAlbumResponse" message="tns:IGalleryService_CommentAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCommentsByEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/GetAllCommentsByEvent" message="tns:IGalleryService_GetAllCommentsByEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/GetAllCommentsByEventResponse" message="tns:IGalleryService_GetAllCommentsByEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/UploadAlbum" message="tns:IGalleryService_UploadAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/UploadAlbumResponse" message="tns:IGalleryService_UploadAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGalleryService/UploadMedia" message="tns:IGalleryService_UploadMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGalleryService/UploadMediaResponse" message="tns:IGalleryService_UploadMedia_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGalleryService" type="tns:IGalleryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateAlbum">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/CreateAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAlbum">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/DeleteAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAlbums">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/GetAllAlbums" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCMSAllAlbums">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/GetCMSAllAlbums" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlbum">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/GetAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCMSAlbum">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/GetCMSAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlbum">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/UpdateAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGalleryCollection">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/GetGalleryCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateStorage">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/CreateStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStorage">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/DeleteStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorage">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/GetStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableStorage">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/GetAvailableStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStorage">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/GetAllStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStorage">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/UpdateStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStorageUsedSpace">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/UpdateStorageUsedSpace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMedia">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/CreateMedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMedia">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/DeleteMedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedia">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/GetMedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LikeAlbum">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/LikeAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAlbumLikes">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/GetAllAlbumLikes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommentAlbum">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/CommentAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCommentsByEvent">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/GetAllCommentsByEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAlbum">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/UploadAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMedia">
+      <soap:operation soapAction="http://tempuri.org/IGalleryService/UploadMedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GalleryService">
+    <wsdl:port name="BasicHttpBinding_IGalleryService" binding="tns:BasicHttpBinding_IGalleryService">
+      <soap:address location="http://core1.apps2you.org:4550/GalleryService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

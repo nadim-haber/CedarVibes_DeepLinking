@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" />
+  <xs:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" />
+  <xs:element name="CreateAlbum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="eventRequest" nillable="true" type="q1:AlbumRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAlbumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="CreateAlbumResult" nillable="true" type="q2:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAlbum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="guidRequest" nillable="true" type="q3:GuidRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAlbumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="DeleteAlbumResult" nillable="true" type="q4:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAlbums">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="collectionRequest" nillable="true" type="q5:AlbumCollectionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAlbumsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetAllAlbumsResult" nillable="true" type="q6:ResponseOfArrayOfAlbumResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCMSAllAlbums">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="collectionRequest" nillable="true" type="q7:AlbumCollectionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCMSAllAlbumsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetCMSAllAlbumsResult" nillable="true" type="q8:ResponseOfArrayOfAlbumCMSResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlbum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q9:GetAlbumRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlbumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetAlbumResult" nillable="true" type="q10:ResponseOfAlbumResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCMSAlbum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="guidRequest" nillable="true" type="q11:GuidRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCMSAlbumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetCMSAlbumResult" nillable="true" type="q12:ResponseOfAlbumCMSResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAlbum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="albumRequest" nillable="true" type="q13:AlbumRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAlbumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="UpdateAlbumResult" nillable="true" type="q14:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGalleryCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q15:GuidCollectionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGalleryCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetGalleryCollectionResult" nillable="true" type="q16:ResponseOfArrayOfGalleryResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateStorage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="storageRequest" nillable="true" type="q17:StorageRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateStorageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="CreateStorageResult" nillable="true" type="q18:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteStorage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="guidRequest" nillable="true" type="q19:GuidRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteStorageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="DeleteStorageResult" nillable="true" type="q20:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStorage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="guidRequest" nillable="true" type="q21:GuidRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStorageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetStorageResult" nillable="true" type="q22:ResponseOfStorageRequest58xvcGq0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableStorage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="getAvailableStorageRequest" nillable="true" type="q23:ArrayOfGetAvailableStorageRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableStorageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetAvailableStorageResult" nillable="true" type="q24:ResponseOfStorageRequest58xvcGq0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllStorage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="collectionRequest" nillable="true" type="q25:CollectionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllStorageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetAllStorageResult" nillable="true" type="q26:ResponseOfArrayOfStorageRequest58xvcGq0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStorage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="storageRequest" nillable="true" type="q27:StorageRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStorageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="UpdateStorageResult" nillable="true" type="q28:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStorageUsedSpace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="updateStorageUsedSpaceRequest" nillable="true" type="q29:UpdateStorageUsedSpaceRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStorageUsedSpaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="UpdateStorageUsedSpaceResult" nillable="true" type="q30:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMedia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="mediaRequest" nillable="true" type="q31:MediaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMediaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="CreateMediaResult" nillable="true" type="q32:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMedia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="guidRequest" nillable="true" type="q33:GuidRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMediaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="DeleteMediaResult" nillable="true" type="q34:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMedia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="guidRequest" nillable="true" type="q35:GuidRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMediaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetMediaResult" nillable="true" type="q36:ResponseOfMediaCMSResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LikeAlbum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="albumLikeRequest" nillable="true" type="q37:AlbumLikeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LikeAlbumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="LikeAlbumResult" nillable="true" type="q38:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAlbumLikes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="entityCollectionRequest" nillable="true" type="q39:EntityCollectionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAlbumLikesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetAllAlbumLikesResult" nillable="true" type="q40:ResponseOfArrayOfAlbumLikeResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommentAlbum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="eventCommentRequest" nillable="true" type="q41:AlbumCommentRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommentAlbumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="CommentAlbumResult" nillable="true" type="q42:ResponseOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCommentsByEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="entityCollectionRequest" nillable="true" type="q43:EntityCollectionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCommentsByEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="GetAllCommentsByEventResult" nillable="true" type="q44:ResponseOfArrayOfAlbumCommentRequest58xvcGq0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadAlbum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q45:StoreAlbumRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadAlbumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="UploadAlbumResult" nillable="true" type="q46:ResponseOfUploadMediaResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadMedia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="request" nillable="true" type="q47:StoreFileRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadMediaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Micro.Common.Model" minOccurs="0" name="UploadMediaResult" nillable="true" type="q48:ResponseOfUploadMediaResponsedhY6ZDpg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

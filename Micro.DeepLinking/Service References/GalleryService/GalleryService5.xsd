@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Micro.Common.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+  <xs:import schemaLocation="http://core1.apps2you.org:4550/GalleryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" />
+  <xs:complexType name="BaseRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_Version" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelTag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorrelationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeviceID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LanguageCode" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="PlatformTag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseRequest" nillable="true" type="tns:BaseRequest" />
+  <xs:complexType name="ResponseOfguid">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="guid" Namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" type="ser:guid" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfguid" nillable="true" type="tns:ResponseOfguid" />
+  <xs:complexType name="ResponseOfArrayOfAlbumResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfAlbumResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q2:ArrayOfAlbumResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfArrayOfAlbumResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfArrayOfAlbumResponsedhY6ZDpg" />
+  <xs:complexType name="MediaObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Thumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeValue" type="xs:int" />
+      <xs:element minOccurs="0" name="Duration" type="xs:long" />
+      <xs:element minOccurs="0" name="Guid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MediaObject" nillable="true" type="tns:MediaObject" />
+  <xs:complexType name="ResponseOfArrayOfAlbumCMSResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfAlbumCMSResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q3:ArrayOfAlbumCMSResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfArrayOfAlbumCMSResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfArrayOfAlbumCMSResponsedhY6ZDpg" />
+  <xs:complexType name="ResponseOfAlbumResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AlbumResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q4:AlbumResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfAlbumResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfAlbumResponsedhY6ZDpg" />
+  <xs:complexType name="ResponseOfAlbumCMSResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AlbumCMSResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q5:AlbumCMSResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfAlbumCMSResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfAlbumCMSResponsedhY6ZDpg" />
+  <xs:complexType name="ResponseOfArrayOfGalleryResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfGalleryResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q6:ArrayOfGalleryResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfArrayOfGalleryResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfArrayOfGalleryResponsedhY6ZDpg" />
+  <xs:complexType name="ArrayOfMediaObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MediaObject" nillable="true" type="tns:MediaObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMediaObject" nillable="true" type="tns:ArrayOfMediaObject" />
+  <xs:complexType name="ResponseOfStorageRequest58xvcGq0">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="StorageRequest" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="Data" nillable="true" type="q7:StorageRequest" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfStorageRequest58xvcGq0" nillable="true" type="tns:ResponseOfStorageRequest58xvcGq0" />
+  <xs:complexType name="ResponseOfArrayOfStorageRequest58xvcGq0">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfStorageRequest" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="Data" nillable="true" type="q8:ArrayOfStorageRequest" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfArrayOfStorageRequest58xvcGq0" nillable="true" type="tns:ResponseOfArrayOfStorageRequest58xvcGq0" />
+  <xs:complexType name="ResponseOfMediaCMSResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MediaCMSResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q9:MediaCMSResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfMediaCMSResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfMediaCMSResponsedhY6ZDpg" />
+  <xs:complexType name="ResponseOfArrayOfAlbumLikeResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfAlbumLikeResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q10:ArrayOfAlbumLikeResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfArrayOfAlbumLikeResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfArrayOfAlbumLikeResponsedhY6ZDpg" />
+  <xs:complexType name="ResponseOfArrayOfAlbumCommentRequest58xvcGq0">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfAlbumCommentRequest" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" minOccurs="0" name="Data" nillable="true" type="q11:ArrayOfAlbumCommentRequest" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfArrayOfAlbumCommentRequest58xvcGq0" nillable="true" type="tns:ResponseOfArrayOfAlbumCommentRequest58xvcGq0" />
+  <xs:complexType name="ResponseOfUploadMediaResponsedhY6ZDpg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UploadMediaResponse" Namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" minOccurs="0" name="Data" nillable="true" type="q12:UploadMediaResponse" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfUploadMediaResponsedhY6ZDpg" nillable="true" type="tns:ResponseOfUploadMediaResponsedhY6ZDpg" />
+</xs:schema>

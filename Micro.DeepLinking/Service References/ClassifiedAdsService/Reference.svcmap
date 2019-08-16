@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cf5296c6-aae7-40bb-ba0d-3ba7b3af04a8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Micro.Common" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:4931/ClassifiedAdsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ClassifiedAdsService.xsd" MetadataType="Schema" ID="1f9f79ad-f15c-42fc-a64e-aa1db2bfbbe4" SourceId="1" SourceUrl="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ClassifiedAdsService1.xsd" MetadataType="Schema" ID="dcf775c5-f27a-41ad-8e7d-0411d959f56a" SourceId="1" SourceUrl="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ClassifiedAdsService2.xsd" MetadataType="Schema" ID="94b70c1b-e2e6-4c7a-a658-0c08b99179c0" SourceId="1" SourceUrl="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ClassifiedAdsService.disco" MetadataType="Disco" ID="7839a9b4-882c-44e2-afd5-d7553bc7c940" SourceId="1" SourceUrl="http://localhost:4931/ClassifiedAdsService.svc?disco" />
+    <MetadataFile FileName="ClassifiedAdsService3.xsd" MetadataType="Schema" ID="a9be4c75-7539-45d1-b9b4-84898dc556c8" SourceId="1" SourceUrl="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ClassifiedAdsService.wsdl" MetadataType="Wsdl" ID="e1d68c8e-5593-4eb1-9957-928063067518" SourceId="1" SourceUrl="http://localhost:4931/ClassifiedAdsService.svc?wsdl" />
+    <MetadataFile FileName="ClassifiedAdsService4.xsd" MetadataType="Schema" ID="f945e4da-9227-48ed-81aa-f9ba5065cea2" SourceId="1" SourceUrl="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ClassifiedAdsService5.xsd" MetadataType="Schema" ID="edeb8a83-206d-49ce-9fc0-960b2137d8ec" SourceId="1" SourceUrl="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

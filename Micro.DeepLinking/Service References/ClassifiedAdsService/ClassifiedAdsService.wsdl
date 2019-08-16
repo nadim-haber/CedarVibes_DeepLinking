@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ClassifiedAdsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Request" />
+      <xsd:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Micro.Common.Model" />
+      <xsd:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:4931/ClassifiedAdsService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Micro.SOAP.Model.Response" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IClassifiedAdsService_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_SearchDefinition_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDefinition" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_SearchDefinition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDefinitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_PostItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostItem" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_PostItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItems" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetItemInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemInfo" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetItemInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_ActivateDeactivateItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateDeactivateItem" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_ActivateDeactivateItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateDeactivateItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetMyItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyItems" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetMyItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetEntities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntities" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetEntities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetEntityDefinition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityDefinition" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetEntityDefinition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityDefinitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetEntityInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityInfo" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetEntityInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetVendorInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorInfo" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetVendorInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_LikeUnlikeItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:LikeUnlikeItem" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_LikeUnlikeItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LikeUnlikeItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_LikeUnlikeVendor_InputMessage">
+    <wsdl:part name="parameters" element="tns:LikeUnlikeVendor" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_LikeUnlikeVendor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LikeUnlikeVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetLikeItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLikeItems" />
+  </wsdl:message>
+  <wsdl:message name="IClassifiedAdsService_GetLikeItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLikeItemsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IClassifiedAdsService">
+    <wsdl:operation name="Search">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/Search" message="tns:IClassifiedAdsService_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/SearchResponse" message="tns:IClassifiedAdsService_Search_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDefinition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/SearchDefinition" message="tns:IClassifiedAdsService_SearchDefinition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/SearchDefinitionResponse" message="tns:IClassifiedAdsService_SearchDefinition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/PostItem" message="tns:IClassifiedAdsService_PostItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/PostItemResponse" message="tns:IClassifiedAdsService_PostItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetItems" message="tns:IClassifiedAdsService_GetItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetItemsResponse" message="tns:IClassifiedAdsService_GetItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetItemInfo" message="tns:IClassifiedAdsService_GetItemInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetItemInfoResponse" message="tns:IClassifiedAdsService_GetItemInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateDeactivateItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/ActivateDeactivateItem" message="tns:IClassifiedAdsService_ActivateDeactivateItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/ActivateDeactivateItemResponse" message="tns:IClassifiedAdsService_ActivateDeactivateItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetMyItems" message="tns:IClassifiedAdsService_GetMyItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetMyItemsResponse" message="tns:IClassifiedAdsService_GetMyItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetEntities" message="tns:IClassifiedAdsService_GetEntities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetEntitiesResponse" message="tns:IClassifiedAdsService_GetEntities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityDefinition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetEntityDefinition" message="tns:IClassifiedAdsService_GetEntityDefinition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetEntityDefinitionResponse" message="tns:IClassifiedAdsService_GetEntityDefinition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetEntityInfo" message="tns:IClassifiedAdsService_GetEntityInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetEntityInfoResponse" message="tns:IClassifiedAdsService_GetEntityInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetVendorInfo" message="tns:IClassifiedAdsService_GetVendorInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetVendorInfoResponse" message="tns:IClassifiedAdsService_GetVendorInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LikeUnlikeItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/LikeUnlikeItem" message="tns:IClassifiedAdsService_LikeUnlikeItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/LikeUnlikeItemResponse" message="tns:IClassifiedAdsService_LikeUnlikeItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LikeUnlikeVendor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/LikeUnlikeVendor" message="tns:IClassifiedAdsService_LikeUnlikeVendor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/LikeUnlikeVendorResponse" message="tns:IClassifiedAdsService_LikeUnlikeVendor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLikeItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetLikeItems" message="tns:IClassifiedAdsService_GetLikeItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClassifiedAdsService/GetLikeItemsResponse" message="tns:IClassifiedAdsService_GetLikeItems_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IClassifiedAdsService" type="tns:IClassifiedAdsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDefinition">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/SearchDefinition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostItem">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/PostItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/GetItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemInfo">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/GetItemInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateDeactivateItem">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/ActivateDeactivateItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyItems">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/GetMyItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntities">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/GetEntities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityDefinition">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/GetEntityDefinition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityInfo">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/GetEntityInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorInfo">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/GetVendorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LikeUnlikeItem">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/LikeUnlikeItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LikeUnlikeVendor">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/LikeUnlikeVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLikeItems">
+      <soap:operation soapAction="http://tempuri.org/IClassifiedAdsService/GetLikeItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClassifiedAdsService">
+    <wsdl:port name="BasicHttpBinding_IClassifiedAdsService" binding="tns:BasicHttpBinding_IClassifiedAdsService">
+      <soap:address location="http://localhost:4931/ClassifiedAdsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
